@@ -73,6 +73,10 @@ function Class:extend(obj)
 
 	setmetatable(obj, mt)
 
+	function obj._.super()
+		return self
+	end
+
 	return obj
 end
 
